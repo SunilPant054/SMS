@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('full_name');
             $table->string('father_name');
             $table->string('mother_name');
+            $table->date('date_of_birth');
             $table->string('branch');
             $table->string('course');
             $table->string('address');
