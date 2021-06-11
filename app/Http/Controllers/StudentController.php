@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('students.register');
+       //
 
     }
 
@@ -25,7 +25,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('students.register');
     }
 
     /**
@@ -36,7 +36,8 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Student::create($request->all());
+        return redirect()->route('student.create');
     }
 
     /**

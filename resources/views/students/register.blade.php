@@ -10,32 +10,34 @@
                 </div>
                 <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <form id="demo-form2" data-parsley-validate method="POST" action="{{ route('student.store') }}"
+                        class="form-horizontal form-label-left">
+                        @csrf
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Full Name <span
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="full_name">Full Name <span
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" required="required"
+                                <input type="text" id="full_name" name="full_name" required="required"
                                     class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Father's Name <span
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="father_name">Father's Name <span
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="last-name" name="last-name" required="required"
+                                <input type="text" id="last-name" name="father_name" name="father_name" required="required"
                                     class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Mother's Name <span
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mother_name">Mother's Name <span
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" required="required"
+                                <input type="text" id="mother_name" name="mother_name" required="required"
                                     class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
@@ -43,8 +45,8 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Branch <span
                                     class="required">*</span></label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <select class="form-control">
-                                    <option>Choose Branch</option>
+                                <select class="form-control" name="branch">
+                                    <option value="">Choose Branch</option>
                                     <option>#</option>
                                     <option>#</option>
                                     <option>#</option>
@@ -56,8 +58,8 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Course <span
                                     class="required">*</span></label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <select class="form-control">
-                                    <option>Choose Course</option>
+                                <select class="form-control" name="course">
+                                    <option value="">Choose Course</option>
                                     <option>#</option>
                                     <option>#</option>
                                     <option>#</option>
@@ -66,30 +68,30 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Address <span
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address">Address <span
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" required="required"
+                                <input type="text" id="address" name="address" required="required"
                                     class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Phone Number <span
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone_no">Phone Number <span
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" required="required"
+                                <input type="text" id="phone_no" name="phone_no" required="required"
                                     class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Email<span
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone_no">Email <span
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" required="required"
-                                    class="form-control col-md-7 col-xs-12">
+                                <input type="email" class="form-control col-md-7 col-xs-12" name="email" required="required"
+                                    placeholder="Enter email">
                             </div>
                         </div>
                         <div class="form-group">
@@ -97,8 +99,8 @@
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required"
-                                    type="text">
+                                <input id="date_of_birth" class="date-picker form-control col-md-7 col-xs-12"
+                                    name="date_of_birth" required="required" type="text">
                             </div>
                         </div>
                         <div class="form-group">
