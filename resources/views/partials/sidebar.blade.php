@@ -5,7 +5,7 @@
             <li><a><i class="fa fa-home"></i> Student <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{ route('student.create') }}">Registration</a></li>
-                    <li><a href="index2.html">Student Detail</a></li>
+                    <li><a href="{{ route('student.index') }}">Student Detail</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-edit"></i> Branch <span class="fa fa-chevron-down"></span></a>
