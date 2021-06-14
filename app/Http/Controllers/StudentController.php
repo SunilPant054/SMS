@@ -83,6 +83,7 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        dd($student);
+        $student->delete();
+        return redirect()->route('student.index');
     }
 }

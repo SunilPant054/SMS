@@ -55,9 +55,15 @@
                                             <a href="{{ route('student.edit', $student->id) }}"
                                                 class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit
                                             </a>
-                                            <a href="{{ route('student.destroy', $student->id) }}"
-                                                class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete
-                                            </a>
+                                            <form action="{{ route('student.destroy', $student->id) }}" method="POST"
+                                                onsubmit="return confirm('Are you sure?');" style="display: inline-flex;">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button class="btn btn-danger btn-xs>
+                                                                <i class=" fa fa-trash-o"></i>Delete
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
