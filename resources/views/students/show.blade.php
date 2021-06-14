@@ -26,7 +26,7 @@
                             <dt class="col-sm-3">Mother's Name :</dt>
                             <dd class="col-sm-9">{{ $student->mother_name }}</dd>
 
-                            <dt class="col-sm-3 text-truncate">Branch :</dt>
+                            <dt class="col-sm-3">Branch :</dt>
                             <dd class="col-sm-9">{{ $student->branch }}</dd>
 
                             <dt class="col-sm-3">Course</dt>
