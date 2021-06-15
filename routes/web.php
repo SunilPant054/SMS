@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BranchController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
@@ -23,9 +24,11 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+    //Student Route
     Route::resource('/student', StudentController::class);
 
+    //Branch Route
+    Route::resource('/branch', BranchController::class);
 });
 
 

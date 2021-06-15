@@ -15,10 +15,9 @@ class CreateBranchesTable extends Migration
     {
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('student_id');
-            $table->foreign('student_id')->references('id')->on('students');
             $table->string('branch_name');
             $table->string('short_branch_name');
+            $table->integer('total_course');
             $table->timestamps();
         });
     }
