@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BranchController;
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
@@ -29,6 +30,9 @@ Route::group(['middleware' => ['auth']], function() {
 
     //Branch Route
     Route::resource('/branch', BranchController::class);
+
+    //Course Route
+    Route::resource('/course', CourseController::class);
 });
 
 

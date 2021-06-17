@@ -16,8 +16,8 @@
             </li>
             <li><a><i class="fa fa-desktop"></i> Course <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="general_elements.html">Add Course</a></li>
-                    <li><a href="media_gallery.html">View Courses</a></li>
+                    <li><a href="{{ route('course.create') }}">Add Course</a></li>
+                    <li><a href="{{ route('course.index') }}"> Course Detail</a></li>
                 </ul>
             </li>
     </div>

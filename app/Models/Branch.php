@@ -16,4 +16,8 @@ class Branch extends Model
         'total_course'
     ];
 
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
 }
